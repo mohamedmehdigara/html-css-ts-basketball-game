@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basketball Game</title>
+  
+</head>
+<body>
+  <div id="game-container">
+    <svg id="court" xmlns="http://www.w3.org/2000/svg">
+      <!-- Basketball Court -->
+      <rect x="0" y="0" width="600" height="300" />
+
+      <!-- Basketball Hoop -->
+      <rect id="basket" x="500" y="100" width="10" height="100" />
+      <circle id="net" cx="505" cy="150" r="8" />
+      <line id="net" x1="500" y1="150" x2="505" y2="150" />
+
+      <!-- Player -->
+      <circle id="player" cx="100" cy="250" r="10" />
+
+      <!-- Basketball -->
+      <circle id="basketball" cx="50" cy="150" r="10" />
+    </svg>
+    <div id="score-display">Score: 0</div>
+  </div>
+
+  <!-- External CSS file for further styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- External TypeScript file for game logic -->
+  <script src="script.ts"></script>
+
+  <!-- Additional TypeScript code for enhancements -->
+  
+  
+</body>
+</html>

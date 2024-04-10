@@ -1,0 +1,54 @@
+/* Game container styles */
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Basketball court styles */
+  #court {
+    background-color: #7CFC00;
+    width: 600px;
+    height: 300px;
+    position: relative;
+  }
+  
+  /* Basketball hoop styles */
+  #basket {
+    fill: #808080;
+  }
+  
+  /* Basketball net styles */
+  #net {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+  }
+  
+  /* Player styles */
+  #player {
+    fill: #000;
+  }
+  
+  /* Basketball styles */
+  #basketball {
+    fill: orange;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for basketball */
+  #basketball:hover {
+    fill: darkorange;
+  }
+  
+  /* Score display styles */
+  #score-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
