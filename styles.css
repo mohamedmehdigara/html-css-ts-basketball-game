@@ -1,54 +1,51 @@
-/* Game container styles */
-#game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  /* Basketball court styles */
-  #court {
-    background-color: #7CFC00;
-    width: 600px;
-    height: 300px;
-    position: relative;
-  }
-  
-  /* Basketball hoop styles */
-  #basket {
-    fill: #808080;
-  }
-  
-  /* Basketball net styles */
-  #net {
-    fill: none;
-    stroke: #fff;
-    stroke-width: 2;
-  }
-  
-  /* Player styles */
-  #player {
-    fill: #000;
-  }
-  
-  /* Basketball styles */
-  #basketball {
-    fill: orange;
-    cursor: pointer;
-  }
-  
-  /* Hover effect for basketball */
-  #basketball:hover {
-    fill: darkorange;
-  }
-  
-  /* Score display styles */
-  #score-display {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    color: #fff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  }
-  
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Background color of the container */
+}
+
+/* SVG container styles */
+#court {
+  width: 600px;
+  height: 300px;
+  border: 2px solid #000; /* Border around the basketball court */
+  border-radius: 10px; /* Rounded corners for the basketball court */
+}
+
+/* Basketball hoop styles */
+#backboard {
+  fill: #808080; /* Backboard color */
+}
+#rim {
+  fill: #FFD700; /* Rim color */
+  stroke: #000; /* Rim border color */
+  stroke-width: 2; /* Rim border width */
+}
+#net {
+  fill: none;
+  stroke: #fff; /* Net color */
+  stroke-width: 2;
+  stroke-dasharray: 4; /* Dashed line for the net */
+}
+
+/* Player styles */
+#player {
+  fill: #000; /* Player color */
+}
+
+/* Basketball styles */
+#basketball {
+  fill: orange; /* Basketball color */
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Smooth transition for basketball movement */
+}
+#basketball:hover {
+  fill: darkorange; /* Color change on hover */
+}
+#basketball-texture {
+  fill: url(#basketball-pattern); /* Basketball texture */
+}
+
