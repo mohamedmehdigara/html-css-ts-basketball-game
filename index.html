@@ -1,83 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basketball Game</title>
-  <style>
-    /* Game container styles */
-    #game-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f0f0f0; /* Background color of the container */
-    }
-
-    /* Basketball court styles */
-    #court {
-      width: 600px;
-      height: 300px;
-    }
-
-    /* Basketball hoop styles */
-    #backboard {
-      fill: #808080; /* Backboard color */
-    }
-    #rim {
-      fill: #FFD700; /* Rim color */
-    }
-    #net {
-      fill: none;
-      stroke: #fff; /* Net color */
-      stroke-width: 2;
-    }
-
-    /* Player styles */
-    #player {
-      fill: #000; /* Player color */
-    }
-
-    /* Basketball styles */
-    #basketball {
-      fill: orange; /* Basketball color */
-      cursor: pointer;
-    }
-    #basketball-texture {
-      fill: url(#basketball-pattern); /* Basketball texture */
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div id="game-container">
-    <!-- SVG container for the game elements -->
     <svg id="court" xmlns="http://www.w3.org/2000/svg">
       <!-- Basketball Court -->
-      <rect x="0" y="0" width="600" height="300" fill="#8B4513" /> <!-- Hardwood court background -->
+      <rect x="0" y="0" width="600" height="300" fill="#8B4513" />
 
       <!-- Basketball Hoop -->
-      <!-- Backboard -->
-      <rect id="backboard" x="500" y="50" width="10" height="100" />
-      <!-- Rim -->
-      <circle id="rim" cx="505" cy="100" r="10" />
-      <!-- Net -->
-      <path id="net" d="M515,100 Q510,110 505,120 Q500,110 495,100 Q490,110 485,120 Q480,110 475,100 Q470,110 465,120 Q460,110 455,100 Q450,110 445,120 Q440,110 435,100 Q430,110 425,120 Q420,110 415,100 Q410,110 405,120 Q400,110 395,100 Q390,110 385,120 Q380,110 375,100 Q370,110 365,120 Q360,110 355,100 Q350,110 345,120 Q340,110 335,100 Q330,110 325,120 Q320,110 315,100 Q310,110 305,120 Q300,110 295,100 Q290,110 285,120 Q280,110 275,100 Q270,110 265,120 Q260,110 255,100 Q250,110 245,120 Q240,110 235,100 Q230,110 225,120 Q220,110 215,100 Q210,110 205,120 Q200,110 195,100 Q190,110 185,120 Q180,110 175,100 Q170,110 165,120 Q160,110 155,100 Q150,110 145,120 Q140,110 135,100 Q130,110 125,120 Q120,110 115,100 Q110,110 105,120 Q100,110 95,100 Q90,110 85,120 Q80,110 75,100 Q70,110 65,120 Q60,110 55,100 Q50,110 45,120 Q40,110 35,100 Q30,110 25,120 Q20,110 15,100 Q10,110 5,120" />
+      <rect id="backboard" x="480" y="90" width="15" height="45" fill="#808080" /> <!-- Backboard -->
+      <circle id="rim" cx="487" cy="112" r="8" fill="none" stroke="#FF4500" stroke-width="3" /> <!-- Rim -->
+      <path id="net" d="M487 120 q-10 15 -20 0" stroke="#fff" stroke-width="2" fill="none" /> <!-- Net -->
 
       <!-- Player -->
-      <circle id="player" cx="100" cy="250" r="10" />
+      <circle id="player" cx="80" cy="230" r="15" fill="#000" /> <!-- Player -->
 
       <!-- Basketball -->
       <defs>
-        <!-- Basketball texture pattern -->
-        <pattern id="basketball-pattern" patternUnits="userSpaceOnUse" width="20" height="20">
-          <circle cx="10" cy="10" r="3" fill="#000" /> <!-- Texture dots on the basketball -->
+        <pattern id="basketball-texture" patternUnits="userSpaceOnUse" width="10" height="10">
+          <circle cx="5" cy="5" r="2" fill="#000" /> <!-- Texture dots -->
         </pattern>
       </defs>
-      <!-- Basketball Outer Circle -->
-      <circle id="basketball" cx="50" cy="150" r="10" />
-      <!-- Basketball Texture -->
-      <circle id="basketball-texture" cx="50" cy="150" r="5" />
+      <circle id="basketball" cx="50" cy="200" r="10" fill="orange" stroke="black" stroke-width="1" />
+      <circle cx="50" cy="200" r="10" fill="url(#basketball-texture)" />
     </svg>
+    <div id="score-display">Score: 0</div> <!-- Score display -->
   </div>
+
+  <script src="script.ts"></script>
 </body>
+
 </html>
